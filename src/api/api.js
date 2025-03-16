@@ -1,11 +1,14 @@
 import axios from 'axios';
 
-const API_URL_USER = 'http://localhost:8000/users';
-const API_URL_MENU = "http://localhost:8000/menu"
-const API_URL_TABLE = "http://localhost:8000/table"
-const API_URL_ORDER = "http://localhost:8000/order"
 
-const API_URL_QR = "http://localhost:8000/qrcode/table"
+const API_PATH = process.env.REACT_APP_API_URL;
+console.log(API_PATH)
+const API_URL_USER = API_PATH+'/users';
+const API_URL_MENU = API_PATH+"/menu"
+const API_URL_TABLE = API_PATH+"/table"
+const API_URL_ORDER = API_PATH+"/order"
+
+const API_URL_QR = API_PATH+"/table"
 
 export const getUsers = () => axios.get(API_URL_USER);
 export const getUserById = (id) => axios.get(`${API_URL_USER}/${id}`);
