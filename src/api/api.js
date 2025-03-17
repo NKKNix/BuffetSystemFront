@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const API_PATH = process.env.REACT_APP_API_URL;
+const API_PATH = "https://buffetsystemback.onrender.com";
 console.log(API_PATH)
 const API_URL_USER = API_PATH+'/users';
 const API_URL_MENU = API_PATH+"/menu"
